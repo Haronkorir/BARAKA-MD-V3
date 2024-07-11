@@ -35,16 +35,16 @@ const temps = moment().format('HH:mm:ss');
 const date = moment().format('DD/MM/YYYY');
 
   let infoMsg =  `
-╭──❂𝐁𝐀𝐑𝐀𝐊𝐀-𝐌𝐃-𝐕2❂───❂
+╭───❂𝐁𝐀𝐑𝐀𝐊𝐀-𝐌𝐃-𝐕2❂───❂
 ┊❂╭────────────────❂
-┊✺┊*User* : ${s.OWNER_NAME}
+┊✺┊ *User* : ${s.OWNER_NAME}
 ┊✺┊ *Mode* : ${mode}
 ┊✺┊ *Commands* : ${cm.length}
 ┊✺┊ *Time* : ${temps}  
 ┊✺┊ *Ram* : ${format(os.totalmem() - os.freemem())}/${format(os.totalmem())}
 ┊✺┊  𝐁𝐀𝐑𝐀𝐊𝐀-𝐌𝐃-𝐕2
-┊❂╰─────────────────❂
-╰───────────────────❂ \n\n`;
+┊❂╰────────────────❂
+╰────────────────────❂ \n\n`;
  
     let menuMsg=`  
   ┆┆┆┆┆┆┆┆┆┆┆┆┆┆┆┆┆┆┆┆┆┆
