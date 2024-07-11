@@ -1,14 +1,16 @@
 const util = require('util');
 const fs = require('fs-extra');
-const { zokou } = require(__dirname + "/../france/king");
-const { format } = require(__dirname + "/../france/mesfonctions");
+const { zokou } = require(__dirname + "/../framework/zokou");
+const { format } = require(__dirname + "/../framework/mesfonctions");
 const os = require("os");
 const moment = require("moment-timezone");
 const s = require(__dirname + "/../set");
+const more = String.fromCharCode(8206)
+const readmore = more.repeat(4001)
 
-zokou({ nomCom: "menu", categorie: "General" }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom: "repo", categorie: "General" }, async (dest, zk, commandeOptions) => {
     let { ms, repondre ,prefixe,nomAuteurMessage,mybotpic} = commandeOptions;
-    let { cm } = require(__dirname + "/../france//king");
+    let { cm } = require(__dirname + "/../framework//zokou");
     var coms = {};
     var mode = "public";
     
@@ -18,11 +20,13 @@ zokou({ nomCom: "menu", categorie: "General" }, async (dest, zk, commandeOptions
 
 
     
- cm.map(async (com, index) => {
+
+    cm.map(async (com, index) => {
         if (!coms[com.categorie])
             coms[com.categorie] = [];
         coms[com.categorie].push(com.nomCom);
     });
+
 
     moment.tz.setDefault('EAT');
 
