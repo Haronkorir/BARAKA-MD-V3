@@ -9,8 +9,8 @@ RUN apt-get update && \
   npm i pm2 -g && \
   rm -rf /var/lib/apt/lists/*
   
-RUN git clone https://github.com/kingibrahimtech/Bmw-xmd /root/beltah
-WORKDIR /root/beltah/
+RUN git clone https://github.com/ibraahadam/BARAKA-MD-V3 /root/BmwMD
+WORKDIR /root/bmwmd/
 
 
 COPY package.json .
@@ -21,5 +21,5 @@ COPY . .
 
 EXPOSE 5000
 
-CMD ["node", "beltah.js"]
+CMD ["node", "ibrahim.js"]
 
