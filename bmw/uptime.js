@@ -85,7 +85,7 @@ function _0x4925() {
         'misc/sstab',
         'join',
         '*BARAKA-M',
-        'test',
+        'ping',
         'To\x20check\x20p',
         'To\x20check\x20r',
         'sdsWy',
