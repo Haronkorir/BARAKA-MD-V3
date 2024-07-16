@@ -9,8 +9,8 @@ RUN apt-get update && \
   npm i pm2 -g && \
   rm -rf /var/lib/apt/lists/*
   
-RUN git clone https://github.com/ibraahadam/BARAKA-MD-V3 /root/BmwMD
-WORKDIR /root/bmwmd/
+RUN git clone https://github.com/ibraahadam/BARAKA-MD-V3 /root/BegaMD
+WORKDIR /root/begamd/
 
 
 COPY package.json .
@@ -21,5 +21,5 @@ COPY . .
 
 EXPOSE 5000
 
-CMD ["node", "ibrahim.js"]
+CMD ["node", "bega.js"]
 
