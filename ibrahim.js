@@ -850,8 +850,8 @@ zk.ev.on('group-participants.update', async (group) => {
 
                 let cmsg =`      ❒─❒⁠⁠⁠⁠ *BOT-IS-RUNNING* ❒⁠⁠⁠⁠─⁠⁠⁠⁠❒⁠⁠⁠⁠
 ╭❒⁠⁠⁠⁠─❒⁠⁠⁠⁠─❒⁠⁠⁠⁠─❒⁠⁠⁠⁠─❒⁠⁠⁠⁠              
-❒⁠⁠⁠⁠ *Dev*   : *Ibrahim Adams*   
-❒⁠⁠⁠⁠ *Bot*   : *Bmw md*
+❒⁠⁠⁠⁠ *Dev*   : *Baraka bega*   
+❒⁠⁠⁠⁠ *Bot*   : *Baraka md*
 ❒⁠⁠⁠⁠ *Prefix*: [ ${prefixe} ]
 ╰❒⁠⁠⁠⁠─❒⁠⁠⁠⁠─❒⁠⁠⁠⁠─❒⁠⁠⁠⁠─❒⁠⁠⁠⁠`;
 
