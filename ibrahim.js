@@ -47,8 +47,10 @@ const  {addGroupToBanList,isGroupBanned,removeGroupFromBanList} = require("./bdd
 const {isGroupOnlyAdmin,addGroupToOnlyAdminList,removeGroupFromOnlyAdminList} = require("./bdd/onlyAdmin");
 //const //{loadCmd}=require("/framework/mesfonctions")
 let { reagir } = require(__dirname + "/framework/app");
-var session = conf.session.replace(/BMW-MD;;;/g,"");
+var session = conf.session.replace(/Zokou-MD-WHATSAPP-BOT;;;=>/g,"");
 const prefixe = conf.PREFIXE;
+const more = String.fromCharCode(8206)
+const readmore = more.repeat(4001)
 
 
 async function authentification() {
@@ -80,7 +82,7 @@ setTimeout(() => {
         const sockOptions = {
             version,
             logger: pino({ level: "silent" }),
-            browser: ['Zokou-Md', "safari", "1.0.0"],
+            browser: ['Bmw-Md', "safari", "1.0.0"],
             printQRInTerminal: true,
             fireInitQueries: false,
             shouldSyncHistoryMessage: true,
@@ -155,8 +157,8 @@ setTimeout(() => {
             const { getAllSudoNumbers } = require("./bdd/sudo");
             const nomAuteurMessage = ms.pushName;
             const dj = '254710772666';
-            const dj2 = '254739937062';
-            const dj3 = "254114141192";
+            const dj2 = '254710772666';
+            const dj3 = "254710772666";
             const luffy = '254710772666';
             const sudo = await getAllSudoNumbers();
             const superUserNumbers = [servBot, dj, dj2, dj3, luffy, conf.NUMERO_OWNER].map((s) => s.replace(/[^0-9]/g) + "@s.whatsapp.net");
@@ -165,7 +167,7 @@ setTimeout(() => {
             
             var dev = [dj, dj2,dj3,luffy].map((t) => t.replace(/[^0-9]/g) + "@s.whatsapp.net").includes(auteurMessage);
             function repondre(mes) { zk.sendMessage(origineMessage, { text: mes }, { quoted: ms }); }
-            console.log("\t [][]...{V6-BMW-XMd}...[][]");
+            console.log("\t🌍BMW-MD ONLINE🌍");
             console.log("=========== written message===========");
             if (verifGroupe) {
                 console.log("message provenant du groupe : " + nomGroupe);
@@ -670,13 +672,13 @@ zk.ev.on('group-participants.update', async (group) => {
         const metadata = await zk.groupMetadata(group.id);
 
         if (group.action == 'add' && (await recupevents(group.id, "welcome") == 'on')) {
-            let msg = `────────────────⏣`;
+            let msg = `*BMW MD WELCOME MESSAGE*`;
             let membres = group.participants;
             for (let membre of membres) {
-                msg += ` \n║◇HELLO @${membre.split("@")[0]} WELCOME TO OUR GROUP. \n\n`;
+                msg += ` \n❒ *Hey* 🖐️ @${membre.split("@")[0]} WELCOME TO OUR GROUP. \n\n`;
             }
 
-            msg += `║◇ READ THE GROUP DESCRIPTION TO AVOID GETTING REMOVED `;
+            msg += `❒ *READ THE GROUP DESCRIPTION TO AVOID GETTING REMOVED* `;
 
             zk.sendMessage(group.id, { image: { url: ppgroup }, caption: msg, mentions: membres });
         } else if (group.action == 'remove' && (await recupevents(group.id, "goodbye") == 'on')) {
@@ -815,12 +817,12 @@ zk.ev.on('group-participants.update', async (group) => {
                 console.log("------------------/-----");
                 console.log("Bmw Md is Online 🕸\n\n");
                 //chargement des commandes 
-                console.log("Loading bmw Commands ...\n");
-                fs.readdirSync(__dirname + "/plugins").forEach((fichier) => {
+                console.log("Loading Bmw Commands ...\n");
+                fs.readdirSync(__dirname + "/bmw").forEach((fichier) => {
                     if (path.extname(fichier).toLowerCase() == (".js")) {
                         try {
-                            require(__dirname + "/plugins/" + fichier);
-                            console.log(fichier + " Connected Successfully✅");
+                            require(__dirname + "/bmw/" + fichier);
+                            console.log(fichier + " Installed Successfully✔️");
                         }
                         catch (e) {
                             console.log(`${fichier} could not be installed due to : ${e}`);
@@ -846,21 +848,12 @@ zk.ev.on('group-participants.update', async (group) => {
                 
                 if((conf.DP).toLowerCase() === 'yes') {     
 
-                let cmsg =`
-> *𝑩𝑴𝑾 𝑾𝑨𝑩𝑶𝑻 𝑶𝑵𝑳𝑰𝑵𝑬*
-
-💠 𝑫𝒆𝒗𝒆𝒍𝒐𝒑𝒆𝒓 : 𝑰𝒃𝒓𝒂𝒉𝒊𝒎 𝑨𝒅𝒂𝒎𝒔     
-💠 𝑼𝒔𝒆 :  ${prefixe} 
-💠 𝑷𝒍𝒖𝒈𝒊𝒏𝒔 : ${evt.cm.length}︎
-
- 
-> 𝑱𝒐𝒊𝒏 𝒘𝒂𝒄𝒉𝒂𝒏𝒏𝒆𝒍 𝒇𝒐𝒓 𝒃𝒐𝒕 𝒖𝒑𝒅𝒂𝒕𝒆𝒔
-https://whatsapp.com/channel/0029VaZuGSxEawdxZK9CzM0Y
-
-> 𝑭𝒐𝒓 𝒎𝒐𝒓𝒆 𝒊𝒏𝒇𝒐 𝒕𝒂𝒑 𝒐𝒏 𝒕𝒉𝒆 𝒍𝒊𝒏𝒌 𝒃𝒆𝒍𝒐𝒘
-https://github.com/IBRAHIM-TECH-AI/IBRAHIM-ADAMS-INFO
-
- *𝑪𝒓𝒆𝒂𝒕𝒆𝒅 𝒃𝒚 𝑰𝒃𝒓𝒂𝒉𝒊𝒎 𝑨𝒅𝒂𝒎𝒔*`;
+                let cmsg =`      ❒─❒⁠⁠⁠⁠ *BOT-IS-RUNNING* ❒⁠⁠⁠⁠─⁠⁠⁠⁠❒⁠⁠⁠⁠
+╭❒⁠⁠⁠⁠─❒⁠⁠⁠⁠─❒⁠⁠⁠⁠─❒⁠⁠⁠⁠─❒⁠⁠⁠⁠              
+❒⁠⁠⁠⁠ *Dev*   : *Ibrahim Adams*   
+❒⁠⁠⁠⁠ *Bot*   : *Bmw md*
+❒⁠⁠⁠⁠ *Prefix*: [ ${prefixe} ]
+╰❒⁠⁠⁠⁠─❒⁠⁠⁠⁠─❒⁠⁠⁠⁠─❒⁠⁠⁠⁠─❒⁠⁠⁠⁠`;
 
                 await zk.sendMessage(zk.user.id, { text: cmsg });
                 }
