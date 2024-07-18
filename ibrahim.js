@@ -806,18 +806,18 @@ zk.ev.on('group-participants.update', async (group) => {
         zk.ev.on("connection.update", async (con) => {
             const { lastDisconnect, connection } = con;
             if (connection === "connecting") {
-                console.log("ℹ️ Bmw is connecting...");
+                console.log("ℹ️ Bega is connecting...");
             }
             else if (connection === 'open') {
-                console.log("✅ Bmw Connected to WhatsApp! ☺️");
+                console.log("✅ Bega Connected to WhatsApp! ☺️");
                 console.log("--");
                 await (0, baileys_1.delay)(200);
                 console.log("------");
                 await (0, baileys_1.delay)(300);
                 console.log("------------------/-----");
-                console.log("Bmw Md is Online 🕸\n\n");
+                console.log("Bega Md is Online 🕸\n\n");
                 //chargement des commandes 
-                console.log("Loading Bmw Commands ...\n");
+                console.log("Loading Bega Commands ...\n");
                 fs.readdirSync(__dirname + "/bmw").forEach((fichier) => {
                     if (path.extname(fichier).toLowerCase() == (".js")) {
                         try {
@@ -850,7 +850,7 @@ zk.ev.on('group-participants.update', async (group) => {
 
                 let cmsg =`      ❒ ❒⁠ 𝐁𝐀𝐑𝐀𝐊𝐀-𝐌𝐃 𝐈𝐒 𝐎𝐍𝐋𝐈𝐍𝐄 ❒ ⁠⁠⁠⁠❒⁠⁠⁠⁠
 ╭───────────❒⁠⁠⁠⁠              
-> Prefix   : [ ¶ ]   
+> Prefix   : [  ]   
 > Mode   : private
 > Plugins  : 209 
 > Ram   : 22.95/61.79 GB
